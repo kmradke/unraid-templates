@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>cups-minideb-ufrii-dell</Name>
+  <Repository>kmradke/cups-minideb-ufrii-dell</Repository>
+  <Registry>https://hub.docker.com/r/kmradke/cups-minideb-ufrii-dell/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/kmradke/unraid-templates/issues</Support>
+  <Project>https://www.github.com/kmradke/cups-minideb-ufrii-dell</Project>
+  <Overview>Docker image based on minideb including a CUPS server with Canon MF8050cn and Dell e310dw printer drivers.</Overview>
+  <Category>Productivity: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:631]</WebUI>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1618805335</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Docker image based on minideb including a CUPS server with Canon MF8050cn and Dell e310dw printer drivers.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort/>
+        <ContainerPort>631</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/services</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Config Directory" Target="/config" Default="" Mode="rw" Description="Config directory path" Type="Path" Display="always-hide" Required="true" Mask="false"/>
+  <Config Name="Web Interface" Target="631" Default="631" Mode="tcp" Description="Web/CUPS interface port" Type="Port" Display="always-hide" Required="true" Mask="false"/>
+  <Config Name="Avahi Services" Target="/services" Default="/etc/avahi/services" Mode="rw" Description="Avahi services path" Type="Path" Display="always-hide" Required="true" Mask="false"/>
+</Container>
