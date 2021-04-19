@@ -45,7 +45,9 @@
   </Data>
   <Environment/>
   <Labels/>
-  <Config Name="Config Directory" Target="/config" Default="" Mode="rw" Description="Config directory path" Type="Path" Display="always-hide" Required="true" Mask="false"/>
   <Config Name="Web Interface" Target="631" Default="631" Mode="tcp" Description="Web/CUPS interface port" Type="Port" Display="always-hide" Required="true" Mask="false"/>
+  <Config Name="Config Directory" Target="/config" Default="" Mode="rw" Description="Config directory path" Type="Path" Display="always-hide" Required="true" Mask="false"/>
   <Config Name="Avahi Services" Target="/services" Default="/etc/avahi/services" Mode="rw" Description="Avahi services path" Type="Path" Display="always-hide" Required="true" Mask="false"/>
+  <Config Name="DBUS" Target="/var/run/dbus" Default="/var/run/dbus" Mode="rw" Description="DBUS" Type="Path" Display="always-hide" Required="true" Mask="false"/>
+  <Config Name="CUPS Spool" Target="/var/spool/cups" Default="" Mode="rw" Description="CUPS spool path" Type="Path" Display="always-hide" Required="true" Mask="false"/>
 </Container>
